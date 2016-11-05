@@ -1,0 +1,23 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "scripts": {
+    "cp:dev": "shx cp node_modules/vue/dist/vue.js assets/vue.js",
+    "cp:prod": "shx cp node_modules/vue/dist/vue.min.js assets/vue.js",
+    "serve": "VUE_ENV=server nodemon --watch . --ext js,html server.js",
+    "dev": "npm-run-all cp:dev serve",
+    "prod": "npm-run-all cp:prod serve"
+  },
+  "author": "Dalibor Gogic",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "vue": "^2.0.5",
+    "vue-server-renderer": "^2.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.1",
+    "shx": "^0.1.4"
+  }
+}

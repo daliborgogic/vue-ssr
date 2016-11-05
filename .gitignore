@@ -1,0 +1,6 @@
+node_modules
+assets/vue.js
+npm-debug.log
+*.sublime-project
+*.sublime-workspace
+.directory

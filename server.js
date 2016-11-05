@@ -29,15 +29,15 @@ server.get('*', (req, res) => {
     res.end(postAppHTML)
   })
 
-  stream.on('error', (error) => {
-    console.error(error)
+  stream.on('error', (err) => {
+    console.error(err)
     return res
       .status(500)
       .send('Server Error')
   })
 })
 
-server.listen(3000, function (error) {
-  if (error) throw error
+server.listen(3000, function (err) {
+  if (err) throw err
   console.log('Server is running at localhost:3000')
 })
